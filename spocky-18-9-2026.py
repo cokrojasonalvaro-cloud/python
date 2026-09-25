@@ -21,3 +21,4 @@ while hunger>0 and happiness>0  and energy>0:
         happiness -= 1
     hours_survived +=1
 print("Congrats, you survived:",hours_survived-1,"hours")
+
