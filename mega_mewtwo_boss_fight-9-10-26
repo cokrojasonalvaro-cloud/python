@@ -1,0 +1,31 @@
+from random import randint
+pokemon = [
+    "Bulbalsaur", "Charmander", "Squirtle",
+    "Ivysaur","Charmeleon", "Wartortle", 
+    "Venusaur", "Charizard", "Blastoise"
+]
+
+mewtwo_health = 100
+level = randint(1,3)
+if level ==1:
+    print("You got basic pokemon=",pokemon[0:3])
+    piu = pokemon[0:3]
+
+if level ==2:
+    print("You got advance pokemon=",pokemon[3:6])
+    print("You got basic pokemon=",pokemon[0:3])
+    piu = pokemon[3:6]
+    
+if level ==3:
+    print("You got master pokemon=",pokemon[6:])
+    piu = pokemon[6:9]
+    
+while mewtwo_health>0:
+    print("Which pokemon would you choose?",)
+    for i in range (0,3):
+        print(i,'.',piu[i])
+    chosen = input()
+    dmg = randint(1,50)
+    mewtwo_health-=dmg
+    print(chosen, "did", dmg, "damage to mew two", "mewtwo health:", mewtwo_health)
+print("You defeated mewtwo")
